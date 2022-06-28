@@ -27,6 +27,16 @@ barchartGC(~infected + vaxStatus,data=newdata, type="percent")
 ```
 According to the proportion based graph calculated, there is a clear and tangible different among the percentages of persons who got covid. It seems as though, of those who got covid, over 60 percent, didn't have any vaccine at all. Conversely, the smallest proportion of person to contract the disease had both the first and new doses of the vaccine. Most potent after that was the new vaccine, then the first on administered. 
 
+###Neumerical summary
+```{r}
+table1 <- xtabs(~infected + vaxStatus,data=newdata)
+rowPerc(table1)
+colPerc(table1)
+```
+The numerical summary generated confirms the illustration presented in the graphical observation. When looking at the row of persons who contracted covid, a solid majority of them(62.7%)Had no vaccine at all, while the fewest(5.95%)had both the first and the new vaccine, along with the strongest dose regiments following that being the new and first vaccines, in such order.
+
+
+
 
 The people that were infected the highest was the people that had no shots 
 
