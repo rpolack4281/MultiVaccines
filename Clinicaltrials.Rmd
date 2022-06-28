@@ -19,12 +19,14 @@ newdata<- read.csv(file="clinicalTrial.csv")
 newdata <- newdata %>%
 mutate(across(where(is.character), as.factor))
 ```
-
+###Graphical Analysis Data
 ```{r}
 barchartGC(~infected + vaxStatus,data=newdata)
 barchartGC(~infected + vaxStatus,data=newdata, type="percent")
 
 ```
+According to the proportion based graph calculated, there is a clear and tangible different among the percentages of persons who got covid. It seems as though, of those who got covid, over 60 percent, didn't have any vaccine at all. Conversely, the smallest proportion of person to contract the disease had both the first and new doses of the vaccine. Most potent after that was the new vaccine, then the first on administered. 
+
 
 The people that were infected the highest was the people that had no shots 
 
